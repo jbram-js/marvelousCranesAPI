@@ -14,8 +14,8 @@ mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true,
   useCreateIndex: true,
 });
-
-app.use(cors({credentials: true, origin: true}));
+//removed the cors settings
+app.use(cors());
 app.use(express.json());
 app.options("*", cors());
 
